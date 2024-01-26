@@ -1,7 +1,7 @@
 "use strict ";
 
 const hamburgerIcon = document.querySelector(".fa-bars");
-const timesIcon = document.querySelector(".fa-times");
+const timesIcon = document.querySelector(".close");
 const mobileArrowIcon = document.querySelector(".mobile_menu_arrow");
 const mobileMenu = document.querySelector(".mobile_menu_items");
 const mobileSubMenu = document.querySelectorAll(".mobile_submenu_item");
@@ -36,4 +36,60 @@ desktopArrowIcon.addEventListener("click", () => {
     desktopSubMenu.forEach((item) => (item.style.display = "none"));
     desktopArrowIcon.className = "desktop_menu_arrow fa fa-angle-double-down";
   }
+});
+
+// slider
+let counter = 0;
+const products = [
+  {
+    name: "تاپ",
+    desc: "بهترین تاپ را بخرید",
+    price: "200 تومان",
+    img: "./images/cloth_1.jpg.webp",
+  },
+  {
+    name: "تیشرت",
+    desc: "بهترین تیشرت را بخرید",
+    price: "290 تومان",
+    img: "./images/cloth_2.jpg.webp",
+  },
+  {
+    name: "کفش",
+    desc: "بهترین کفش را بخرید",
+    price: "220 تومان",
+    img: "../images/shoe_1.jpg.webp",
+  },
+];
+const leftIcon = document.querySelector(".left_icon");
+const rightIcon = document.querySelector(".right_icon");
+
+leftIcon.addEventListener("click", () => {
+  document.querySelector(".slider_img").src = `${products[counter].img}`;
+  document.querySelector(
+    ".slider_title"
+  ).textContent = `${products[counter].name}`;
+  document.querySelector(
+    ".slider_desc"
+  ).textContent = `${products[counter].desc}`;
+  document.querySelector(
+    ".slider_price"
+  ).textContent = `${products[counter].price}`;
+  console.log("tets");
+  counter++;
+  if (counter > 2) counter = 0;
+});
+rightIcon.addEventListener("click", () => {
+  document.querySelector(".slider_img").src = `${products[counter].img}`;
+  document.querySelector(
+    ".slider_title"
+  ).textContent = `${products[counter].name}`;
+  document.querySelector(
+    ".slider_desc"
+  ).textContent = `${products[counter].desc}`;
+  document.querySelector(
+    ".slider_price"
+  ).textContent = `${products[counter].price}`;
+  console.log("tets");
+  counter--;
+  if (counter < 0) counter = 2;
 });

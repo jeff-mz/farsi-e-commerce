@@ -176,7 +176,6 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  border-bottom: 2px solid #f7f7f7;
   margin-bottom: 1rem;
 }
 .container .showcase .cards .card {
@@ -193,6 +192,169 @@
   padding: 1rem;
   border-radius: 50%;
   margin-left: 5px;
+}
+.container .catagories {
+  background-color: #f7f7f7;
+  width: 100%;
+  margin: 0px;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+}
+.container .catagories .category {
+  width: 90%;
+  height: 500px;
+  margin: 1rem auto;
+  padding-top: 1rem;
+  cursor: pointer;
+  filter: brightness(0.8);
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.container .catagories .category:hover {
+  filter: brightness(0.5);
+}
+.container .catagories .category .category_small {
+  margin-top: 2rem;
+  width: 100px;
+  background-color: #204464;
+  text-align: center;
+  color: #ffffff;
+}
+.container .catagories .category .category_name {
+  width: 100px;
+  background-color: #204464;
+  margin: 0.3rem 0rem;
+  text-align: center;
+  color: #ffffff;
+}
+.container .catagories .category:first-child {
+  background: url("../images/women.jpg.webp") center center/cover no-repeat;
+}
+.container .catagories .category:nth-child(2) {
+  background: url("../images/men.jpg.webp") center center/cover no-repeat;
+}
+.container .catagories .category:last-child {
+  background: url("../images/children.jpg.webp") center center/cover no-repeat;
+}
+.container .upper_footer {
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .upper_footer .slider_container .slider_separator {
+  width: 40px;
+  height: 3px;
+  background-color: #204464;
+  margin: 1rem auto;
+}
+.container .upper_footer .slider_container .slider_txt {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.container .upper_footer .slider_container .slider {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+.container .upper_footer .slider_container .slider .slider_img {
+  width: 100%;
+}
+.container .upper_footer .slider_container .slider .slider_desc {
+  margin: 1rem 0rem;
+}
+.container .upper_footer .slider_container .slider .slider_control {
+  margin: 1rem 0rem;
+}
+.container .upper_footer .slider_container .slider .slider_control .right_icon {
+  margin: 0rem 1rem;
+}
+.container .upper_footer .slider_container .slider .slider_control .left_icon {
+  margin: 0rem 1rem;
+}
+.container .upper_footer .blog {
+  width: 100%;
+  margin: 1rem auto;
+}
+.container .upper_footer .blog .blog_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.container .upper_footer .blog .blog_img {
+  width: 90%;
+}
+.container .upper_footer .blog .blog_txt {
+  font-size: 14px;
+  width: 90%;
+  margin: 1rem 0rem;
+}
+.container .upper_footer .blog .blog_btn {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #9152eb;
+  align-self: flex-start;
+  padding: 0.7rem 1rem;
+  color: #ffffff;
+}
+.container .upper_footer .blog .blog_btn:hover {
+  background-color: #7340bb;
+}
+.container .footer {
+  padding: 1rem;
+  width: 100%;
+  border-top: 2px solid #f7f7f7;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: 1fr 1fr 1fr;
+}
+.container .footer .footer_nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0rem;
+}
+.container .footer .footer_nav a {
+  color: #333;
+  text-decoration: none;
+}
+.container .footer .socials {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0rem;
+}
+.container .footer .socials .socials_icon {
+  cursor: pointer;
+  font-size: 25px;
+}
+.container .footer .subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+.container .footer .subscribe input {
+  width: 90%;
+  padding: 0.3rem;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #606060;
 }
 
 @media (min-width: 769px) {
@@ -284,5 +446,79 @@
   .container .navbar .desktop_nav .desktop_menu_items .desktop_menu_item .desktop_submenu_item {
     display: none;
     margin: 1rem 0rem;
+  }
+  .container .showcase .hero .hero_title {
+    margin: 10px 0px;
+    font-size: 34px;
+  }
+  .container .showcase .hero .hero_txt {
+    width: 350px;
+    margin: 10px 0px;
+    font-size: 18px;
+  }
+  .container .showcase .cards {
+    flex-direction: row;
+  }
+  .container .showcase .cards .card .card_body {
+    font-size: 12px;
+    padding: 1rem;
+  }
+  .container .catagories {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .container .catagories .category {
+    width: 80%;
+    margin: 1rem;
+    padding: 1rem 0rem;
+  }
+  .container .upper_footer {
+    flex-direction: row;
+    margin: 2rem 0rem;
+  }
+  .container .upper_footer .slider_container {
+    width: 50%;
+  }
+  .container .upper_footer .slider_container .slider_separator {
+    display: none;
+  }
+  .container .upper_footer .slider_container .slider .slider_img {
+    width: 100%;
+  }
+  .container .upper_footer .blog {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  .container .upper_footer .blog .blog_img {
+    width: 95%;
+  }
+  .container .footer {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .container .footer .footer_nav {
+    margin: 1rem 0rem;
+  }
+  .container .footer .footer_nav a {
+    margin: 1rem 0rem;
+  }
+  .container .footer .socials {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0rem 0rem;
+    height: 90px;
+    align-items: center;
+  }
+  .container .footer .socials .socials_icon {
+    margin: 1rem 0rem;
+  }
+  .container .footer .subscribe {
+    margin: auto;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .container .footer .subscribe input {
+    padding: 0.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
